@@ -21,10 +21,12 @@ const AboutStack = ({navigation}) => {
   );
 }
 
+
 const screenOptionStyle = {
+  headerShown: false,
   headerStyle: { backgroundColor: '#f4511e' },
   headerTintColor: '#fff',
-  headerTitleStyle: { fontWeight: 'bold' },
+  headerTitleStyle: { fontWeight: 'bold'},
 };
 
 export {HomeStack, AboutStack};

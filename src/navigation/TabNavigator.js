@@ -8,12 +8,7 @@ const Tab = createBottomTabNavigator();
 const TabNavigator = () => {
   return (
     <Tab.Navigator 
-      tabBarOptions={{
-        activeTintColor: '#f4501eff',
-        inactiveTintColor: 'gray',
-        style: { backgroundColor: '#fff' },
-        labelStyle: { fontSize: 12 },
-      }}
+      screenOptions={screenOptionStyle}
     >
         <Tab.Screen 
           name="Home" 
@@ -38,5 +33,19 @@ const TabNavigator = () => {
     </Tab.Navigator>
     );
 }
+
+const screenOptionStyle = {
+  headerShown: true,
+  headerStyle: { backgroundColor: '#f4511e' },
+  headerTintColor: '#fff',
+  headerTitleStyle: { fontWeight: 'bold' },
+
+  tabBarStyle: {
+    backgroundColor: '#f4511e',
+  },
+  tabBarActiveTintColor: '#fff', // Color for active tab icon/label
+  tabBarInactiveTintColor: '#ffffffa6',
+  tabBarLabelStyle: { fontSize: 20 }
+};
 
 export default TabNavigator;
