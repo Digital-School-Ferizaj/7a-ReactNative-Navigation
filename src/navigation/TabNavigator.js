@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const Tab = createBottomTabNavigator();
 
-const TabNavigator = () => {
+const HomeTabNavigator = () => {
   return (
     <Tab.Navigator 
       screenOptions={screenOptionStyle}
@@ -20,18 +20,27 @@ const TabNavigator = () => {
             ),
           }}
         />
-        <Tab.Screen 
-          name="About" 
-          component={AboutStack}
-          options={{
-            tabBarLabel: 'About',
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons name="information" color={color} size={size} />
-            ),
-          }}
-        />
     </Tab.Navigator>
     );
+}
+
+const AboutTabNavigator = () => {
+  return (
+    <Tab.Navigator 
+      screenOptions={screenOptionStyle}
+    >
+      <Tab.Screen 
+        name="About" 
+        component={AboutStack}
+        options={{
+          tabBarLabel: 'About',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="information" color={color} size={size} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
+  );
 }
 
 const screenOptionStyle = {
@@ -48,4 +57,4 @@ const screenOptionStyle = {
   tabBarLabelStyle: { fontSize: 20 }
 };
 
-export default TabNavigator;
+export { HomeTabNavigator, AboutTabNavigator };
