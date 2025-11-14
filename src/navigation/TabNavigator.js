@@ -53,7 +53,7 @@ const screenOptionStyle = {
     backgroundColor: '#f4511e',
   },
   tabBarActiveTintColor: '#fff', // Color for active tab icon/label
-  tabBarInactiveTintColor: '#ffffffa6',
+  tabBarInactiveTintColor: '#ffffffa4',
   tabBarLabelStyle: { fontSize: 20 }
 };
 
